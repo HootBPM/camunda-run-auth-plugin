@@ -1,6 +1,6 @@
-package io.github.hobbstech.camunda.oauth2.plugin.config;
+package org.camunda.oauth2.plugin.config;
 
-import io.github.hobbstech.camunda.oauth2.plugin.filter.SpringSecurityAuthenticationProvider;
+import org.camunda.oauth2.plugin.filter.SpringSecurityAuthenticationProvider;
 import org.camunda.bpm.webapp.impl.security.auth.ContainerBasedAuthenticationFilter;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

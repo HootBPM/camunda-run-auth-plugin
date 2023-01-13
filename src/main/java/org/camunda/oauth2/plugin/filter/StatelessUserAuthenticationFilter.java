@@ -1,4 +1,4 @@
-package io.github.hobbstech.camunda.oauth2.plugin.filter;
+package org.camunda.oauth2.plugin.filter;
 
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.rest.util.EngineUtil;
