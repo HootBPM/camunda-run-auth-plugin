@@ -12,7 +12,7 @@ import org.springframework.core.Ordered;
 public class EnableCamundaSpringSecurity {
 
     @Configuration
-    @ComponentScan(basePackages = {"org.camunda.oauth2.plugin"})
+    @ComponentScan(basePackages = {"org.camunda.oauth2.plugin.config","org.camunda.oauth2.plugin.filter"})
     public static class ComponentScanConfiguration {
     }
 }
