@@ -2,9 +2,11 @@ package org.camunda.oauth2.plugin.config;
 
 import org.camunda.oauth2.plugin.filter.SpringSecurityAuthenticationProvider;
 import org.camunda.bpm.webapp.impl.security.auth.ContainerBasedAuthenticationFilter;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
 import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -13,6 +15,8 @@ import org.springframework.web.context.request.RequestContextListener;
 
 import java.util.Collections;
 
+@ConditionalOnMissingClass("org.springframework.test.context.junit.jupiter.SpringExtension")
+@Configuration
 @Order(SecurityProperties.BASIC_AUTH_ORDER - 15)
 public class WebAppSecurityConfig extends WebSecurityConfigurerAdapter {
 
@@ -44,7 +48,7 @@ public class WebAppSecurityConfig extends WebSecurityConfigurerAdapter {
                 .oauth2Login()
                 .and()
                 .logout()
-                .addLogoutHandler(keycloakLogoutHandler)
+//                .addLogoutHandler(keycloakLogoutHandler)
                 .logoutSuccessUrl("/");
         ;
     }
