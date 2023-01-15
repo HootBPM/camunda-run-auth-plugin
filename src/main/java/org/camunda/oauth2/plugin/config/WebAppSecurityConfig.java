@@ -15,7 +15,7 @@ import org.springframework.web.context.request.RequestContextListener;
 
 import java.util.Collections;
 
-//@ConditionalOnMissingClass("org.springframework.test.context.junit.jupiter.SpringExtension")
+@ConditionalOnMissingClass("org.springframework.test.context.junit.jupiter.SpringExtension")
 @Configuration
 @Order(SecurityProperties.BASIC_AUTH_ORDER - 15)
 public class WebAppSecurityConfig extends WebSecurityConfigurerAdapter {
