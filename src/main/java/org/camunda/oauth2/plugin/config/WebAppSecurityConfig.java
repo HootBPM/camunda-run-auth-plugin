@@ -26,11 +26,13 @@ public class WebAppSecurityConfig extends WebSecurityConfigurerAdapter {
 //                .antMatchers("/app/**", "/app/cockpit/**", "/api/engine/**", "/lib/**");
 //    }
 
-    private final KeycloakLogoutHandler keycloakLogoutHandler;
+//    private KeycloakLogoutHandler keycloakLogoutHandler;
 
-    WebAppSecurityConfig(KeycloakLogoutHandler keycloakLogoutHandler) {
-        this.keycloakLogoutHandler = keycloakLogoutHandler;
-    }
+//    WebAppSecurityConfig(){}
+
+//    WebAppSecurityConfig(KeycloakLogoutHandler keycloakLogoutHandler) {
+//        this.keycloakLogoutHandler = keycloakLogoutHandler;
+//    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
