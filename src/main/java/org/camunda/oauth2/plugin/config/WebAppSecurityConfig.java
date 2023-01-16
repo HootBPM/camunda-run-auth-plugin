@@ -17,7 +17,7 @@ import java.util.Collections;
 
 //@ConditionalOnMissingClass("org.springframework.test.context.junit.jupiter.SpringExtension")
 @Configuration
-@Order(SecurityProperties.BASIC_AUTH_ORDER - 15)
+//@Order(SecurityProperties.BASIC_AUTH_ORDER - 15)
 public class WebAppSecurityConfig extends WebSecurityConfigurerAdapter {
 
 //    @Override
